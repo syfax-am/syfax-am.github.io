@@ -23,7 +23,7 @@ import {
   Globe
 } from 'lucide-react';
 
-// --- DATA: PROJECTS ---
+// --- DATA : PROJECTS ---
 const projectsData = [
   {
     id: 1,
