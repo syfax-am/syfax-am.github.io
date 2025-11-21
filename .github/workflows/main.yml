@@ -33,5 +33,5 @@ jobs:
           publish_dir: ./dist
           cname: syfax-am.github.io
           publish_branch: main     # Publier sur la branche main (requis pour USER.github.io)
-          force_orphan: true       # Garantir un nettoyage propre
-          force: true              # <--- ÉCRASER LE CODE SOURCE AVEC LE CONTENU DU DOSSIER dist (Corrige l'erreur "deploy from main to main")
+          force_orphan: true       # <--- Ceci résout l'erreur "deploy from main to main"
+          allow_empty_commit: true # Ajout pour garantir que la publication réussisse
