@@ -33,3 +33,4 @@ jobs:
           cname: syfax-am.github.io
           publish_branch: main
           force_orphan: true
+          force: true
