@@ -1,0 +1,7 @@
+# Dossiers standards à ignorer
+/node_modules
+/dist
+/.env
+
+# Cache de déploiement gh-pages
+/.cache/gh-pages
