@@ -22,8 +22,9 @@ import {
   Layers,
   Globe
 } from 'lucide-react';
-
-// --- DATA : PROJECTS ---
+import profileImg from './assets/id.jpg';
+import cvFile from './assets/CV_syfax-ait-medjber.pdf';
+// --- DATA    : PROJECTS ---
 const projectsData = [
   {
     id: 1,
@@ -502,8 +503,8 @@ function HomePage() {
                 </a>
               </div>
               <a
-                href="assets/CV_syfax-ait-medjber.pdf"
-                download
+                href={cvFile}
+                download="CV_Syfax_Ait_Medjber.pdf" 
                 className="inline-flex items-center px-8 py-3 bg-[#476da3] hover:bg-[#375580] rounded-full text-white font-medium transition-all shadow-lg shadow-blue-900/25 hover:shadow-blue-900/40 hover:-translate-y-0.5"
               >
                 Download CV <Download size={18} className="ml-2" />
@@ -641,7 +642,7 @@ function HomePage() {
             >
               <div className="absolute -inset-4 bg-[#476da3] rounded-2xl opacity-20 blur-xl"></div>
               <img
-                src="assets/id.jpg"
+                src={profileImg}
                 alt="Syfax Ait Medjber"
                 className="relative rounded-xl object-cover w-full shadow-2xl border border-zinc-700/50 grayscale hover:grayscale-0 transition-all duration-500"
               />
