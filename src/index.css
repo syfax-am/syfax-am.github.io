@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-zinc-950 text-white;
+  }
+}
+
+@layer utilities {
+  .bg-gradient {
+    /* J'ai aussi mis à jour le gradient utilitaire pour correspondre à ton thème */
+    @apply bg-gradient-to-r from-[#476da3] to-cyan-400;
+  }
+}
+
+/* Global Styles */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #09090b; }
+
+/* Modification ici pour le bleu #476da3 */
+::-webkit-scrollbar-thumb { 
+  background: #476da3;
+  border-radius: 6px;
+  border: 2px solid #09090b;
+}
+
+/* Version un peu plus foncée pour le survol (hover) */
+::-webkit-scrollbar-thumb:hover { background: #375580; }
+
+/* Firefox */
+html { scrollbar-color: #476da3 #09090b; }
