@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
+
 permissions:
-  contents: write
+  contents: write # Autorise le GITHUB_TOKEN à écrire sur le dépôt
 
 jobs:
   build-and-deploy:
@@ -31,6 +32,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: syfax-am.github.io
-          publish_branch: main
-          force_orphan: true
-          force: true
+          publish_branch: main     # Publier sur la branche main (requis pour USER.github.io)
+          force_orphan: true       # Garantir un nettoyage propre
+          force: true              # <--- ÉCRASER LE CODE SOURCE AVEC LE CONTENU DU DOSSIER dist (Corrige l'erreur "deploy from main to main")
