@@ -753,7 +753,7 @@ function HomePage() {
               Send Message <Mail size={20} className="ml-2" />
             </a>
             <a
-              href="https://calendly.com/syfax-aitmedjber-pro/30min"
+              href="https://calendly.com/syfaxaitmedjber/get_in_touch"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white transition-colors"
