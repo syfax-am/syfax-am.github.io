@@ -502,7 +502,7 @@ function HomePage() {
                 </a>
               </div>
               <a
-                href="assets/CV_syfax-ait-medjber.pdf"
+                href="/assets/CV_syfax-ait-medjber.pdf"
                 download
                 className="inline-flex items-center px-8 py-3 bg-[#476da3] hover:bg-[#375580] rounded-full text-white font-medium transition-all shadow-lg shadow-blue-900/25 hover:shadow-blue-900/40 hover:-translate-y-0.5"
               >
