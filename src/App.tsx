@@ -42,53 +42,111 @@ const projectsData = [
       "Smart Search: Lexical (BM25) + Semantic (BERT/MPNet) retrieval"
     ],
     technologies: ["Python", "PyTorch", "OpenCV", "PaddleOCR", "Tesseract", "Lucene", "FastAPI"],
-    images: ["https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80"], // Placeholder for thesis image
-    github: "https://github.com/syfax-am",
+    images: ["/assets/logo_dakira.png"],
+    github: "private",
     link: "https://dakira.online/"
   },
   {
     id: 2,
-  title: "Image2Text Engine",
-  category: "SaaS / Web App",
-  description: "An intelligent image captioning platform using BLIP models with SEO optimization and content safety features.",
-  fullDescription: `
-    Image2Text Engine is a comprehensive web application that transforms images into descriptive text using state-of-the-art BLIP (Bootstrapping Language-Image Pre-training) models. The platform provides both single image processing and batch processing capabilities, making it ideal for content creators, marketers, and developers.
+    title: "Image2Text Engine",
+    category: "SaaS / Web App",
+    description: "An intelligent image captioning platform using BLIP models with SEO optimization and content safety features.",
+    fullDescription: `
+      Image2Text Engine is a comprehensive web application that transforms images into descriptive text using state-of-the-art BLIP (Bootstrapping Language-Image Pre-training) models. The platform provides both single image processing and batch processing capabilities, making it ideal for content creators, marketers, and developers.
 
-    Key capabilities include:
-    • Advanced image captioning using BLIP Base and BLIP Large models
-    • Batch processing for multiple images via ZIP upload
-    • Automatic SEO metadata generation (keywords and descriptions)
-    • NSFW content detection and filtering
-    • Content moderation for generated captions
-    • Real-time processing with customizable parameters
+      Key capabilities include:
+      • Advanced image captioning using BLIP Base and BLIP Large models
+      • Batch processing for multiple images via ZIP upload
+      • Automatic SEO metadata generation (keywords and descriptions)
+      • NSFW content detection and filtering
+      • Content moderation for generated captions
+      • Real-time processing with customizable parameters
+    `,
+    features: [
+      "Dual BLIP Model Support: Base & Large variants for optimal performance",
+      "Batch Processing: Handle multiple images via ZIP upload with CSV/JSON export",
+      "SEO Optimization: Automatic keyword extraction and meta description generation",
+      "Safety Features: NSFW detection and content moderation",
+      "Customizable Generation: Adjustable length, beam search, and creativity settings",
+      "Real-time Processing: Instant results with progress indicators"
+    ],
+    technologies: [
+      "Python", 
+      "Streamlit", 
+      "PyTorch", 
+      "Transformers", 
+      "BLIP Models", 
+      "Sentence Transformers",
+      "OpenCV", 
+      "PIL"
+    ],
+    images: [
+      "/assets/logo_captions.png",
+    ],
+    github: "https://github.com/syfax-am/Image2Text-Engine",
+    link: "https://image2text-engine.streamlit.app/"
+  },
+  {
+    id: 3,
+    title: "Saliency-Based Palette Extraction",
+    category: "Computer Vision / Design Tool",
+    description: "Extract perceptually meaningful color palettes from images using visual saliency maps and CIELab analysis.",
+    fullDescription: `
+      This project highlights colors that naturally attract human attention, based on the method described by Jahanian et al. (2015). Unlike standard color extractors that just average pixels, this tool uses visual saliency maps to understand what the human eye actually looks at.
+      
+      It combines GBVS (Graph-Based Visual Saliency) and FTS to identify perceptually significant areas, making it ideal for designers, artists, and developers who want to generate attention-driven color schemes automatically.
+    `,
+    features: [
+      "Smart Color Extraction: Automatically detects important colors using Visual Saliency (GBVS + FTS)",
+      "Reliable Methodology: Built on peer-reviewed research from Purdue University",
+      "CIELab Analysis: Uses a perceptual color space for consistent results",
+      "Multiple Formats: Export to HEX, RGB, and CMYK"
+    ],
+    technologies: [
+      "Python",
+      "Streamlit",
+      "OpenCV",
+      "NumPy",
+      "SciPy",
+      "Computer Vision"
+    ],
+    images: [
+      "/assets/logo_saliency.png"
+    ],
+    github: "https://github.com/syfax-am/Saliency-Based-Color-Palette-Extraction",
+    link: "https://saliency-based-color-palette-extraction.streamlit.app/"
+  },
+  {
+    id: 4,
+    title: "Content Moderation MVP",
+    category: "NLP / AI Safety",
+    description: "A dual-modality content filter processing text and images to flag toxicity and NSFW material automatically.",
+    fullDescription: `
+      This Content Moderation MVP is designed to help filter unsafe content by processing both text and images to flag toxicity or sensitive material automatically. It demonstrates how to effectively integrate pre-trained Transformer models into a user-friendly Streamlit interface.
 
-    The application is built with a focus on user experience, featuring an intuitive Streamlit interface, comprehensive safety measures, and export functionality for batch results.
-  `,
-  features: [
-    "Dual BLIP Model Support: Base & Large variants for optimal performance",
-    "Batch Processing: Handle multiple images via ZIP upload with CSV/JSON export",
-    "SEO Optimization: Automatic keyword extraction and meta description generation",
-    "Safety Features: NSFW detection and content moderation",
-    "Customizable Generation: Adjustable length, beam search, and creativity settings",
-    "Real-time Processing: Instant results with progress indicators"
-  ],
-  technologies: [
-    "Python", 
-    "Streamlit", 
-    "PyTorch", 
-    "Transformers", 
-    "BLIP Models", 
-    "Sentence Transformers",
-    "OpenCV", 
-    "PIL", 
-    "scikit-learn",
-    "Hugging Face"
-  ],
-  images: [
-    "https://raw.githubusercontent.com/syfax-am/Image2Text-Engine/refs/heads/main/assets/logo.png",
-  ],
-  github: "https://github.com/syfax-am/Image2Text-Engine",
-  link: "https://image2text-engine.streamlit.app/"
+      How it works:
+      • Text moderation uses the toxic-bert model to analyze batches of comments, labeling them as Toxic, Borderline, or Clean.
+      • Image moderation uses the Falconsai/nsfw_image_detection model to scan uploads with confidence scores.
+    `,
+    features: [
+      "Text Moderation: Batch processing using unitary/toxic-bert model",
+      "Image Moderation: NSFW content detection with confidence scores",
+      "Adjustable Thresholds: Tweak probability sliders for sensitivity",
+      "Batch Analysis: Support for .txt file uploads for bulk comment filtering",
+    ],
+    technologies: [
+      "Python",
+      "Streamlit",
+      "Transformers",
+      "PyTorch",
+      "Toxic-BERT",
+      "Falconsai Model"
+    ],
+    images: [
+      "/assets/logo_moderation.png"
+    ],
+    github: "private",
+    link: "https://content-moderation-mvp.streamlit.app/"
   }
 ];
 
@@ -239,18 +297,18 @@ function ProjectDetail() {
               )}
               {project.github && (
               <a
-                href={project.id === 1 ? "#" : project.github}
-                target={project.id === 1 ? "_self" : "_blank"}
+                href={project.github === "private" ? "#" : project.github}
+                target={project.github === "private" ? "_self" : "_blank"}
                 rel="noopener noreferrer"
                 className={`inline-flex items-center px-6 py-3 rounded-lg text-white font-medium transition-all border ${
-                  project.id === 1 
+                  project.github === "private" 
                     ? "bg-zinc-600 cursor-not-allowed border-zinc-600 text-zinc-400" 
                     : "bg-zinc-800 hover:bg-zinc-700 border-zinc-700"
                 }`}
-                onClick={project.id === 1 ? (e) => e.preventDefault() : undefined}
+                onClick={project.github === "private" ? (e) => e.preventDefault() : undefined}
               >
                 <Github size={20} className="mr-2" /> 
-                {project.id === 1 ? "Code Private" : "View Code"}
+                {project.github === "private" ? "Code Private" : "View Code"}
               </a>
             )}
             </div>
@@ -342,6 +400,7 @@ function HomePage() {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   const { scrollY } = useScroll();
   
   const particlesInit = useCallback(async (engine) => {
@@ -354,6 +413,33 @@ function HomePage() {
     setLastScrollY(currentScroll);
     setShowScrollButton(currentScroll > 500);
   });
+  useEffect(() => {
+    if (isCVModalOpen) {
+      const scrollY = window.scrollY;
+      const body = document.body;
+      
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollY}px`;
+      body.style.width = '100%';
+      
+      return () => {
+        body.style.position = '';
+        body.style.top = '';
+        body.style.width = '';
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [isCVModalOpen]);
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Escape' && isCVModalOpen) {
+        setIsCVModalOpen(false);
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isCVModalOpen]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -501,13 +587,12 @@ function HomePage() {
                   <Mail size={28} />
                 </a>
               </div>
-              <a
-                href="/assets/CV_syfax-ait-medjber.pdf"
-                download
+              <button
+                onClick={() => setIsCVModalOpen(true)}
                 className="inline-flex items-center px-8 py-3 bg-[#476da3] hover:bg-[#375580] rounded-full text-white font-medium transition-all shadow-lg shadow-blue-900/25 hover:shadow-blue-900/40 hover:-translate-y-0.5"
               >
-                Download CV <Download size={18} className="ml-2" />
-              </a>
+                Curriculum Vitae <Download size={18} className="ml-2" />
+              </button>
             </motion.div>
           </motion.div>
         </div>
@@ -753,7 +838,7 @@ function HomePage() {
               Send Message <Mail size={20} className="ml-2" />
             </a>
             <a
-              href="https://calendly.com/syfaxaitmedjber/get_in_touch"
+              href="https://app.cal.eu/syfax-am/get-in-touch"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-full text-white transition-colors"
@@ -763,7 +848,6 @@ function HomePage() {
           </div>
         </motion.div>
       </section>
-
 
       {/* Footer */}
       <footer className="bg-zinc-950 pt-20 pb-10 border-t border-zinc-900">
@@ -801,6 +885,63 @@ function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* CV Preview */}
+      {isCVModalOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setIsCVModalOpen(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="relative w-full max-w-4xl h-[80vh] bg-zinc-900 rounded-2xl border border-zinc-800 shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-zinc-800 bg-zinc-900">
+              <div>
+                <h3 className="text-2xl font-bold text-white">Curriculum Vitae</h3>
+              </div>
+              <button
+                onClick={() => setIsCVModalOpen(false)}
+                className="text-zinc-400 hover:text-white p-2 rounded-lg hover:bg-zinc-800 transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* PDF Viewer */}
+            <div className="h-full overflow-hidden">
+              <iframe
+                src="/assets/CV_syfax-ait-medjber.pdf#view=FitH&toolbar=0&navpanes=0"
+                className="w-full h-full border-0"
+                title="CV Preview"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Footer with Download Button */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-zinc-900 to-transparent">
+              <div className="flex justify-center">
+                <a
+                  href="/assets/CV_syfax-ait-medjber.pdf"
+                  download="CV_Syfax_Ait_Medjber.pdf"
+                  className="inline-flex items-center px-8 py-3 bg-[#476da3] hover:bg-[#375580] rounded-full text-white font-medium transition-all shadow-lg shadow-blue-900/25 hover:shadow-blue-900/40 hover:-translate-y-0.5"
+                  onClick={() => setIsCVModalOpen(false)}
+                >
+                  <Download size={20} className="mr-3" /> Download PDF
+                </a>
+              </div>
+
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
 
       {showScrollButton && (
         <button
