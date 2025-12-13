@@ -726,7 +726,7 @@ function HomePage() {
             >
               <div className="absolute -inset-4 bg-[#476da3] rounded-2xl opacity-20 blur-xl"></div>
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQFIvsn-6gzNmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731677331865?e=1765411200&v=beta&t=kRBov8BuuKqSR-gX7bIFd5qlW6TgbEDYtwoG53PW1OU"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQFIvsn-6gzNmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731677331865?e=1767225600&v=beta&t=NQDNCg9TMbZYfhCVyCJ-m2uvcsDUftTOGmwuI1LKhCU"
                 alt="Syfax Ait Medjber"
                 className="relative rounded-xl object-cover w-full shadow-2xl border border-zinc-700/50 grayscale hover:grayscale-0 transition-all duration-500"
               />
